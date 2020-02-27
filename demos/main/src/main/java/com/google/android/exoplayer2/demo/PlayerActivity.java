@@ -446,6 +446,8 @@ public class PlayerActivity extends AppCompatActivity
       player.addListener(new PlayerEventListener());
       player.setPlayWhenReady(startAutoPlay);
       player.addAnalyticsListener(new EventLogger(trackSelector));
+      // feragusper Hack MUTE player for all the videos
+      player.setVolume(0);
       playerView.setPlayer(player);
       playerView.setPlaybackPreparer(this);
       debugViewHelper = new DebugTextViewHelper(player, debugTextView);
